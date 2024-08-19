@@ -34,6 +34,10 @@ class GameManager: ObservableObject {
     private let session = ARKitSession()
     private let handTracking = HandTrackingProvider()
     
+    // NEW!
+    // 7. 安装拳套
+    private var colisionSubs: EventSubscription?
+
     private init() {
         songs = [
             Song(name: "2077"),

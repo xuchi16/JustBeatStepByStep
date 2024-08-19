@@ -47,15 +47,6 @@ def Xform "Root"
         {
             float3 xformOp:translate = (0, 0, 0)
         }
-
-        def "Cyberpunk_Car" (
-            active = false
-            references = @Model/Cyberpunk_Car.usdz@
-        )
-        {
-            float3 xformOp:scale = (0.002, 0.002, 0.002)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
     }
 
     def Xform "SpatialAudio"
@@ -207,8 +198,7 @@ def Xform "Root"
     )
     {
         def "Box" (
-            active = true
-            references = @Cyberpunk_Car.usdz@
+            references = @Model/Cyberpunk_Car.usdz@
         )
         {
             quatf xformOp:orient = (1, 0, 0, 0)

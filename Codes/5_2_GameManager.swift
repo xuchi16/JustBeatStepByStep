@@ -102,7 +102,7 @@ class GameManager: ObservableObject {
                     box.removeFromParent()
                 }
                 self.tasks.append(destroyTask)
-                DispatchQueue.main.asyncAfter(deadline: startTime + BoxSpawnParameters.lifeTime) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + BoxSpawnParameters.lifeTime) {
                     destroyTask.perform()
                 }
             }
